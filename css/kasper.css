@@ -279,24 +279,18 @@ header nav .form i {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--section-padding);
+  gap: calc(var(--section-padding) / 2);
   max-width: 100%;
   flex-flow: wrap;
 }
 .services-content .up,
 .services-content .down {
   display: flex;
-  gap: var(--section-padding);
-}
-@media (max-width: 767px) {
-  .services-content .up,
-  .services-content .down {
-    flex-flow: wrap;
-  }
+  gap: calc(var(--section-padding) / 2);
 }
 .services-content .box {
   display: flex;
-  gap: calc(var(--section-padding) / 2);
+  gap: calc(var(--section-padding) / 3);
 }
 .services-content .box .text {
   display: flex;
@@ -309,6 +303,19 @@ header nav .form i {
 .services-content .box .text p {
   line-height: 2;
   color: #777;
+}
+/* small screen (mobail) */
+@media (max-width: 767px) {
+  .services-content .up,
+  .services-content .down {
+    flex-flow: wrap;
+    padding: 0 calc(var(--section-padding) / 20);
+  }
+  .services-content .box {
+    flex-flow: column wrap;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 /* End Services */
