@@ -224,4 +224,91 @@ header nav .form i {
   border-color: var(--main-color);
 }
 /* End Landing */
-/* End Landing */
+/* Start Services */
+.services {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.services .repeated-heading {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.services .repeated-heading h2 {
+  position: relative;
+  font-weight: normal;
+  font-size: 40px;
+  position: relative;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+}
+
+.services .repeated-heading h2::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  background-color: #333;
+  bottom: -30px;
+  width: 120px;
+}
+.services .repeated-heading h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  bottom: -38px;
+  background-color: white;
+}
+.services .repeated-heading p {
+  width: 550px;
+  margin: 0 auto 100px;
+  max-width: 100%;
+  line-height: 2;
+  color: #777;
+  text-align: center;
+}
+.services-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--section-padding);
+  max-width: 100%;
+  flex-flow: wrap;
+}
+.services-content .up,
+.services-content .down {
+  display: flex;
+  gap: var(--section-padding);
+}
+@media (max-width: 767px) {
+  .services-content .up,
+  .services-content .down {
+    flex-flow: wrap;
+  }
+}
+.services-content .box {
+  display: flex;
+  gap: calc(var(--section-padding) / 2);
+}
+.services-content .box .text {
+  display: flex;
+  flex-flow: column wrap;
+  gap: calc(var(--section-padding) / 4);
+}
+.services-content .box .text h3 {
+  color: var(--main-color);
+}
+.services-content .box .text p {
+  line-height: 2;
+  color: #777;
+}
+
+/* End Services */
