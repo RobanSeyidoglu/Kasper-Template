@@ -229,14 +229,14 @@ header nav .form i {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
 }
-.services .repeated-heading {
+.repeated-heading {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
-.services .repeated-heading h2 {
+.repeated-heading h2 {
   position: relative;
   font-weight: normal;
   font-size: 40px;
@@ -245,7 +245,7 @@ header nav .form i {
   text-transform: uppercase;
 }
 
-.services .repeated-heading h2::before {
+.repeated-heading h2::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -255,7 +255,7 @@ header nav .form i {
   bottom: -30px;
   width: 120px;
 }
-.services .repeated-heading h2::after {
+.repeated-heading h2::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -267,9 +267,9 @@ header nav .form i {
   bottom: -38px;
   background-color: white;
 }
-.services .repeated-heading p {
+.repeated-heading p {
   width: 550px;
-  margin: 0 auto 100px;
+  margin: 0 auto 80px;
   max-width: 100%;
   line-height: 2;
   color: #777;
@@ -380,3 +380,134 @@ header nav .form i {
   }
 }
 /* End design */
+/* Start Portfolio  */
+.portfolio {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+
+.choices {
+  padding-bottom: var(--section-padding);
+}
+.choices ul {
+  max-width: 100%;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  gap: 20px;
+}
+.choices ul li {
+  padding: 7px;
+}
+.choices ul > :first-of-type {
+  background-color: var(--main-color);
+  color: white;
+}
+.portfolio .images {
+  display: flex;
+  flex-wrap: wrap;
+}
+.portfolio .images .box-2 {
+  overflow: hidden;
+  position: relative;
+  max-width: 25%;
+}
+.images .box-2 img {
+  max-width: 100%;
+  transition: 0.3s;
+}
+@media (max-width: 1198px) {
+  .portfolio .images .box-2 {
+    max-width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .portfolio .images .box-2 {
+    max-width: 100%;
+  }
+}
+
+.images .caption {
+  position: absolute;
+  left: 0;
+  padding: 20px;
+  background-color: white;
+  width: 100%;
+  transition: 0.3s;
+  bottom: -100%;
+}
+.portfolio .images .box-2 .caption h4 {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.portfolio .images .box-2 .caption p {
+  color: var(--main-color);
+}
+.portfolio .images .box-2:hover .caption {
+  bottom: 0;
+}
+.images .box-2:hover img {
+  transform: rotate(3deg) scale(1.1);
+}
+.more {
+  display: block;
+  text-align: center;
+  background-color: var(--main-color);
+  max-width: fit-content;
+  margin: calc(var(--section-padding) / 3.4) auto;
+  padding: 15px 20px;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+/* End Portfolio  */
+/* Start Video */
+.video {
+  position: relative;
+}
+.video::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--transparent-color);
+}
+.video video {
+  width: 100%;
+}
+.video .text {
+  padding: calc(var(--section-padding) / 2) 0;
+  text-align: center;
+  width: 100%;
+  background-color: var(--transparent-color);
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  -o-transform: translateY(50%);
+  text-transform: uppercase;
+}
+.video .text h2 {
+  color: white;
+  padding-bottom: 20px;
+  font-weight: normal;
+}
+.video .text p {
+  color: white;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+.video .text a {
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  background-color: black;
+}
+
+/* End Video */
