@@ -3,6 +3,7 @@
   --main-color: #19c8fa;
   --transparent-color: rgb(15 116 143 / 70%);
   --section-padding: 100px;
+  --main-text-color: #777;
 }
 /* End Variables */
 /* Start Global Rules */
@@ -596,5 +597,324 @@ header nav .form i {
     flex-basis: 25%;
   }
 }
-
 /* End statistics */
+/* Start Skills */
+.informations {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.informations .container {
+  display: flex;
+  justify-content: space-between;
+  gap: calc(var(--section-padding));
+}
+.informations .container .testimonials {
+  display: flex;
+  flex-flow: column wrap;
+  gap: calc(var(--section-padding) / 2);
+  text-align: center;
+  line-height: 1.8;
+}
+.informations .container .testimonials h3 {
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.informations .container .testimonials > p {
+  color: var(--main-text-color);
+}
+.informations .container .testimonials .content {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  gap: calc(var(--section-padding) / 2);
+}
+.informations .container .testimonials .content .photo img {
+  max-width: 100px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.informations .container .testimonials .content .text {
+  display: flex;
+  flex-flow: column;
+  gap: calc(var(--section-padding) / 4);
+  border-bottom: solid 1px #ccc;
+  line-height: 1.8;
+}
+.informations .container .testimonials .content .text .first {
+  color: black;
+  text-align: left;
+}
+.informations .container .testimonials .content .text:last-child {
+  text-align: right;
+  color: var(--main-text-color);
+  padding-bottom: 5px;
+}
+.testimonials ul {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.testimonials ul .active {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: var(--main-color);
+}
+.testimonials ul li:not(.active) {
+  width: 14px;
+  height: 14px;
+  border: solid 1px var(--main-text-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: white;
+}
+.skills {
+  display: flex;
+  flex-flow: column wrap;
+  gap: calc(var(--section-padding) / 2);
+  text-align: center;
+  line-height: 1.8;
+}
+.skills > h3 {
+  font-weight: normal;
+}
+.skills > p {
+  color: var(--main-text-color);
+}
+.skills .content {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: left;
+  gap: 60px;
+}
+.skills .content .html {
+  max-width: 100%;
+  height: 20px;
+  background: linear-gradient(
+    to right,
+    var(--main-color) 0%,
+    var(--main-color) 90%,
+    #dedadc 90%
+  );
+  position: relative;
+}
+.skills .content .html::before {
+  content: "90%";
+  position: absolute;
+  background-color: black;
+  font-size: 14px;
+  width: 40px;
+  padding: 2px 0;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: white;
+  text-align: center;
+  left: calc(90% - 20px);
+  top: -40px;
+}
+.skills .content .html::after {
+  content: "";
+  position: absolute;
+  border: solid 7px;
+  border-color: black transparent transparent transparent;
+  left: calc(90% - 6px);
+  top: -11px;
+}
+.skills .content .css {
+  position: relative;
+  max-width: 100%;
+  height: 20px;
+  background: linear-gradient(
+    to right,
+    var(--main-color) 0%,
+    var(--main-color) 85%,
+    #dedadc 85%
+  );
+}
+.skills .content .css::before {
+  content: "85%";
+  position: absolute;
+  background-color: black;
+  font-size: 14px;
+  width: 40px;
+  padding: 2px 0;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: white;
+  text-align: center;
+  left: calc(85% - 20px);
+  top: -40px;
+}
+.skills .content .css::after {
+  content: "";
+  position: absolute;
+  border: solid 7px;
+  border-color: black transparent transparent transparent;
+  left: calc(85% - 6px);
+  top: -11px;
+}
+
+.skills .content .js {
+  position: relative;
+  max-width: 100%;
+  height: 20px;
+  background: linear-gradient(
+    to right,
+    var(--main-color) 0%,
+    var(--main-color) 75%,
+    #dedadc 75%
+  );
+}
+.skills .content .js::before {
+  content: "75%";
+  position: absolute;
+  background-color: black;
+  font-size: 14px;
+  width: 40px;
+  padding: 2px 0;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: white;
+  text-align: center;
+  left: calc(75% - 20px);
+  top: -40px;
+}
+.skills .content .js::after {
+  content: "";
+  position: absolute;
+  border: solid 7px;
+  border-color: black transparent transparent transparent;
+  left: calc(75% - 6px);
+  top: -11px;
+}
+.skills .content .php {
+  position: relative;
+  max-width: 100%;
+  height: 20px;
+  background: linear-gradient(
+    to right,
+    var(--main-color) 0%,
+    var(--main-color) 20%,
+    #dedadc 20%
+  );
+}
+.skills .content .php::before {
+  content: "20%";
+  position: absolute;
+  background-color: black;
+  font-size: 14px;
+  width: 40px;
+  padding: 2px 0;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: white;
+  text-align: center;
+  left: calc(20% - 20px);
+  top: -40px;
+}
+.skills .content .php::after {
+  content: "";
+  position: absolute;
+  border: solid 7px;
+  border-color: black transparent transparent transparent;
+  left: calc(20% - 6px);
+  top: -11px;
+}
+/* Large Screens */
+
+/* Medium */
+@media (max-width: 991px) {
+  .informations .container {
+    flex-flow: column;
+  }
+  .informations .container .testimonials .content .text {
+    border: none;
+  }
+  .informations .container .testimonials .content {
+    border-bottom: 1px solid #ccc;
+  }
+  .informations .container .testimonials .content {
+    flex-flow: column;
+  }
+  .skills > h3 {
+    margin-bottom: -20px;
+  }
+  .informations .container .testimonials {
+    margin-bottom: -50px;
+  }
+}
+/* Small Screens */
+@media (max-width: 767px) {
+  .informations .container {
+    flex-flow: column;
+  }
+  .informations .container .testimonials .content .text {
+    border: none;
+  }
+  .informations .container .testimonials .content {
+    border-bottom: 1px solid #ccc;
+  }
+  .informations .container .testimonials .content {
+    flex-flow: column;
+  }
+  .skills > h3 {
+    margin-bottom: -20px;
+  }
+  .informations .container .testimonials {
+    margin-bottom: -50px;
+  }
+}
+/* End Skills  */
+/* Start qiote */
+.qiote {
+  position: relative;
+  text-align: center;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-image: url(/images/quote.jpg);
+  background-size: cover;
+  color: white;
+}
+.qiote::before {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
+.qiote .container {
+  position: relative;
+  text-align: center;
+}
+.qiote .container h2 {
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+.qiote .container p {
+  font-weight: lighter;
+}
+/* End qiote */
