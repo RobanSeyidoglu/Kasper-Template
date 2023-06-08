@@ -18,7 +18,7 @@ if (toggleMenu.style.display !== "none") {
     }
   });
 } else if (toggleMenu.style.display === "none") {
-  menu.style.display = "flex";
+  menu.style.display = "flex" ;
 }
 
 // End Header
