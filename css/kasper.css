@@ -35,7 +35,7 @@ ul {
     width: 750px;
   }
 }
-/* Medium */
+
 @media (min-width: 992px) {
   .container {
     width: 970px;
@@ -913,8 +913,111 @@ header nav .form i {
 .qiote .container h2 {
   margin-bottom: 20px;
   font-weight: normal;
+  text-transform: capitalize;
 }
 .qiote .container p {
   font-weight: lighter;
 }
+
 /* End qiote */
+/* Start Pricing */
+.pricing {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.pricing .plans {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  gap: 30px;
+}
+.pricing .plans .plan {
+  background-color: #fcfcfc;
+  text-align: center;
+  padding: 0 calc(var(--section-padding) / 3);
+  border-top: 1px solid var(--main-color);
+}
+.pricing .plans .plan .head {
+  padding: 40px 20px;
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing .plans .plan .head h3 {
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.pricing .plans .plan .head span {
+  font-size: 60px;
+  font-weight: bold;
+}
+.pricing .plans .plan .head span::before {
+  content: "$";
+  font-size: 25px;
+  position: relative;
+  top: -40px;
+  margin-right: 15px;
+  font-weight: normal;
+}
+.pricing .plans .plan .head span::after {
+  content: "/Mo";
+  font-size: 20px;
+  position: relative;
+  right: -15px;
+}
+.pricing .plans .plan ul {
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing .plans .plan ul li {
+  padding: 20px;
+  position: relative;
+}
+.pricing .plans .plan ul li:not(:last-child)::after {
+  content: "";
+  width: 140px;
+  height: 1px;
+  background-color: var(--main-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.pricing .plans .plan .foot a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  border: 1px solid var(--main-color);
+  width: fit-content;
+  margin: 30px auto;
+}
+.pricing .contact-text {
+  text-align: center;
+  margin: 50px auto 20px;
+  font-size: 20px;
+}
+.pricing .contact-link {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+}
+
+/* Small Screens */
+@media (max-width: 767px) {
+  .pricing .plans {
+    flex-flow: column;
+  }
+}
+/* Medium */
+@media (max-width: 1199px) {
+  .pricing .plans {
+    justify-content: center;
+    gap: 20px;
+  }
+  .pricing .plans .plan {
+    padding: 50px;
+  }
+}
+/* End Pricing */
