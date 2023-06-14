@@ -1120,6 +1120,7 @@ textarea {
   padding: 10px 0;
   border: 1px solid #ccc;
   outline: none;
+  resize: none;
 }
 
 .contact .container .content form input {
@@ -1149,20 +1150,19 @@ textarea {
 .contact .container .content .addresses {
   display: flex;
   flex-flow: column wrap;
- 
 }
-.contact .container .content .addresses h4{
+.contact .container .content .addresses h4 {
   text-transform: uppercase;
   margin-bottom: 20px;
   font-weight: 500;
   font-size: 18px;
 }
-.contact .container .content .addresses span{
+.contact .container .content .addresses span {
   display: block;
   color: #777;
   margin-bottom: 10px;
 }
-.contact .container .content .addresses address{
+.contact .container .content .addresses address {
   color: #777;
   line-height: 2;
 }
@@ -1172,19 +1172,72 @@ textarea {
   flex-flow: column wrap;
   margin-bottom: 50px;
 }
-@media (max-width:767px){
-  .contact .container .content{
+@media (max-width: 767px) {
+  .contact .container .content {
     display: flex;
     flex-flow: column wrap;
   }
-  .contact .container .content .addresses{
+  .contact .container .content .addresses {
     justify-content: center;
     align-items: center;
     order: -1;
     text-align: center;
   }
-  .contact .container .content form input[type="submit"]{
+  .contact .container .content form input[type="submit"] {
     margin-bottom: 0;
   }
 }
+/* Start Footer  */
+footer {
+  padding-top: calc(var(--section-padding) / 2);
+  padding-bottom: calc(var(--section-padding) / 2);
+  background-image: url(/images/footer.jpg);
+  position: relative;
+  background-size: cover;
+}
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 70%);
+}
+footer .container {
+  color: white;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 50px;
+}
+footer .container .content {
+  display: flex;
+  gap: 20px;
+  flex-flow: column wrap;
+  align-items: center;
+}
+footer .container .content > p {
+  text-transform: uppercase;
+  position: relative;
+  padding: 0 20px 10px 20px;
+  border-bottom: 2px solid white;
+}
+footer .container ul {
+  display: flex;
+  flex-flow: wrap row;
+  gap: 20px;
+  justify-content: center;
+}
+footer .container ul li i {
+  color: white;
+}
+footer .container p span {
+  color: var(--main-color);
+  font-weight: 700;
+  text-shadow: 1px 1px 10px;
+}
+
+/* End Footer */
 /* End Contact Us */
