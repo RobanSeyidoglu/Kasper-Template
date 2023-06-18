@@ -2,9 +2,9 @@
 let toggleMenu = document.querySelector("nav i");
 let menu = document.querySelector("header nav ul");
 let body = document.body;
-if (toggleMenu.style.display !== "none") {
+if (getComputedStyle(toggleMenu).display !== "none") {
   toggleMenu.onclick = function () {
-    if (menu.style.display === "flex") {
+    if (getComputedStyle(menu).display === "flex") {
       menu.style.display = "none";
     } else {
       menu.style.display = "flex";
@@ -13,7 +13,12 @@ if (toggleMenu.style.display !== "none") {
   document.addEventListener("click", function (event) {
     let targetElement = event.target;
     let isClickedInsideMenu = toggleMenu.contains(targetElement);
-    if (!isClickedInsideMenu) {
+    if (
+      !isClickedInsideMenu &&
+      !(getComputedStyle(toggleMenu).display === "none")
+    ) {
+      console.log("This worked");
+      console.log(toggleMenu.style.display);
       menu.style.display = "none";
     }
   });
